@@ -39,8 +39,8 @@ function Sender(senderID, serverKey, type, debug) {
         username: this.senderId + '@fcm.googleapis.com',
         password: this.serverKey,
         service: `xmpps://${Constants.FCM_SEND_ENDPOINT}:${fcmPort}`,
-        domain: 'fcm.googleapis.com'
-        // reconnect: true,
+        domain: 'fcm.googleapis.com',
+        reconnect: true,
     });
     // this.client.middleware.use((ctx, next) => {
     //     console.log('use: ' + ctx.stanza.toString())
