@@ -143,8 +143,8 @@ function Sender(senderID, serverKey, type, debug) {
 
 Sender.prototype.start = function () {
     const promise = this.client.start().catch(console.error);
-    this.client.socket.setTimeout(0);
-    this.client.socket.setKeepAlive(true, 10000);
+    this.client.websocket.setTimeout(0);
+    this.client.websocket.setKeepAlive(true, 10000);
     return promise;
 };
 
